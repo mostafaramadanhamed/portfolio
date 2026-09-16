@@ -1,49 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
+  <!-- Replaced by the `--base-href` passed to `flutter build web`. -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Mostafa Ramadan — Flutter Developer building clean, scalable cross-platform apps.">
-  <meta property="og:title" content="Mostafa Ramadan · Flutter Developer">
-  <meta property="og:description" content="Portfolio of Mostafa Ramadan, Flutter Developer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mostafa Ramadan · Flutter Developer</title>
+  <meta name="description" content="Mostafa Ramadan — Flutter Developer building clean, scalable cross-platform apps with BLoC, Riverpod, Firebase, and clean architecture.">
+  <meta name="author" content="Mostafa Ramadan">
   <meta name="theme-color" content="#0A0E14">
+  <link rel="canonical" href="https://mostafaramadanhamed.github.io/portfolio/">
 
-  <!-- iOS meta tags & icons -->
+  <!-- Link previews (LinkedIn, WhatsApp, Slack, X). Image URLs must be absolute. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mostafaramadanhamed.github.io/portfolio/">
+  <meta property="og:site_name" content="Mostafa Ramadan">
+  <meta property="og:title" content="Mostafa Ramadan · Flutter Developer">
+  <meta property="og:description" content="Flutter developer building clean, scalable cross-platform apps. See my work, experience, and projects.">
+  <meta property="og:image" content="https://mostafaramadanhamed.github.io/portfolio/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mostafa Ramadan — Flutter Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mostafa Ramadan · Flutter Developer">
+  <meta name="twitter:description" content="Flutter developer building clean, scalable cross-platform apps.">
+  <meta name="twitter:image" content="https://mostafaramadanhamed.github.io/portfolio/og-image.jpg">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Mostafa Ramadan">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Mostafa Ramadan · Flutter Developer</title>
   <link rel="manifest" href="manifest.json">
-</head>
-<body style="background:#0A0E14;margin:0">
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
+  <style>
+    html, body { margin: 0; background: #0A0E14; }
+
+    /* Shown while Flutter downloads and starts; removed on the first frame. */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+      background: #0A0E14;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      transition: opacity 400ms ease;
+    }
+    #loader.done { opacity: 0; pointer-events: none; }
+    #loader .logo { font-size: 26px; font-weight: 700; color: #E6EDF3; letter-spacing: -0.5px; }
+    #loader .logo span { color: #54C5F8; font-weight: 400; }
+    #loader .track { width: 160px; height: 3px; border-radius: 3px; background: #1F2A3A; overflow: hidden; }
+    #loader .bar {
+      width: 40%; height: 100%; border-radius: 3px;
+      background: linear-gradient(90deg, #54C5F8, #8A7CFF);
+      animation: slide 1.1s ease-in-out infinite;
+    }
+    #loader .hint { font-size: 13px; color: #5C6B7F; }
+    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+    @media (prefers-reduced-motion: reduce) { #loader .bar { animation: none; width: 100%; } }
+  </style>
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <div class="logo"><span>&lt;</span>Mostafa<span> /&gt;</span></div>
+    <div class="track"><div class="bar"></div></div>
+    <div class="hint">loading portfolio…</div>
+  </div>
+
+  <noscript>
+    <main style="font-family:system-ui,sans-serif;color:#E6EDF3;max-width:640px;margin:80px auto;padding:0 20px">
+      <h1>Mostafa Ramadan — Flutter Developer</h1>
+      <p>This portfolio needs JavaScript. You can reach me at
+        <a style="color:#54C5F8" href="mailto:mostafaramadanhamed010@gmail.com">mostafaramadanhamed010@gmail.com</a>,
+        on <a style="color:#54C5F8" href="https://www.linkedin.com/in/mostafa-ramadan-hamed-b26177213/">LinkedIn</a>,
+        or on <a style="color:#54C5F8" href="https://github.com/mostafaramadanhamed">GitHub</a>.</p>
+    </main>
+  </noscript>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loader = document.getElementById('loader');
+      if (!loader) return;
+      loader.classList.add('done');
+      setTimeout(function () { loader.remove(); }, 450);
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

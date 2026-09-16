@@ -350,6 +350,11 @@ abstract final class PortfolioData {
       'GitHub Actions',
       'Fastlane',
     ]),
+    SkillGroup('AI Tools', [
+      'Claude Code',
+      'GitHub Copilot',
+      'AI-Assisted Development',
+    ]),
   ];
 
   static const degree = 'Bachelor of Computer Science';

@@ -308,41 +308,6 @@ abstract final class PortfolioData {
       tech: ['Flutter', 'Hive', 'Local Notifications', 'BLoC'],
       githubUrl: 'https://github.com/mostafaramadanhamed/Task-Ease-App',
     ),
-    Project(
-      name: 'Tasty Food',
-      summary: 'A recipe app for browsing meals, drinks, and desserts.',
-      highlights: [
-        'Onboarding flow, name sign-in, and categorized recipe browsing.',
-        'Home carousel, ratings, and a favorites screen.',
-      ],
-      tech: ['Flutter', 'Carousel', 'Page Indicators'],
-      screenshots: [
-        'assets/projects/tasty_food/1.jpg',
-        'assets/projects/tasty_food/2.jpg',
-        'assets/projects/tasty_food/3.jpg',
-        'assets/projects/tasty_food/4.jpg',
-      ],
-    ),
-    Project(
-      name: 'Notes',
-      summary: 'A simple offline notes app.',
-      highlights: [
-        'Create, edit, and delete notes with a color for each one.',
-        'Stored locally with Hive and managed with Cubits.',
-      ],
-      tech: ['Flutter', 'Hive', 'BLoC / Cubit'],
-      githubUrl: 'https://github.com/mostafaramadanhamed/noteApp',
-    ),
-    Project(
-      name: 'Azkar',
-      summary: 'Morning and evening azkar with a tasbih counter.',
-      highlights: [
-        'Built-in azkar lists plus your own custom azkar.',
-        'Tasbih counter, with data saved offline in Hive.',
-      ],
-      tech: ['Flutter', 'Hive', 'BLoC / Cubit'],
-      githubUrl: 'https://github.com/mostafaramadanhamed/azkar',
-    ),
   ];
 
   static const skills = [

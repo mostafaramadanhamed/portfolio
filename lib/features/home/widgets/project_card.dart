@@ -7,6 +7,7 @@ import '../../../data/portfolio_data.dart';
 import '../../../shared/widgets/hover_card.dart';
 import '../../../shared/widgets/link_icon_button.dart';
 import '../../../shared/widgets/tech_chip.dart';
+import 'screenshot_strip.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({super.key, required this.project});
@@ -49,6 +50,13 @@ class ProjectCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 18),
+          if (project.screenshots.isNotEmpty) ...[
+            ScreenshotStrip(
+              screenshots: project.screenshots,
+              projectName: project.name,
+            ),
+            const SizedBox(height: 20),
+          ],
           Row(
             children: [
               Flexible(

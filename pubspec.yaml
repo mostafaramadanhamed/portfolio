@@ -64,6 +64,8 @@ flutter:
   # Bundled so text renders immediately and google_fonts never hits the network.
   assets:
     - assets/google_fonts/
+    - assets/projects/whatsapp/
+    - assets/projects/ensure/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

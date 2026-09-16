@@ -29,6 +29,7 @@ class Project {
     this.githubUrl,
     this.demoUrl,
     this.storeUrl,
+    this.screenshots = const [],
     this.isPlaceholder = false,
   });
 
@@ -39,6 +40,9 @@ class Project {
   final String? githubUrl;
   final String? demoUrl;
   final String? storeUrl;
+
+  /// Asset paths of phone screenshots, shown in order.
+  final List<String> screenshots;
 
   /// Shows a "details coming soon" badge until real content is filled in.
   final bool isPlaceholder;
@@ -196,6 +200,12 @@ abstract final class PortfolioData {
       ],
       tech: ['Flutter', 'Firebase', 'Riverpod'],
       githubUrl: 'https://github.com/mostafaramadanhamed/whatsapp',
+      screenshots: [
+        'assets/projects/whatsapp/1.jpg',
+        'assets/projects/whatsapp/2.jpg',
+        'assets/projects/whatsapp/3.jpg',
+        'assets/projects/whatsapp/4.jpg',
+      ],
     ),
     Project(
       name: 'Ensure',
@@ -207,6 +217,13 @@ abstract final class PortfolioData {
       ],
       tech: ['Flutter', 'Supabase', 'BLoC', 'Clean Architecture'],
       githubUrl: 'https://github.com/mostafaramadanhamed/ensure',
+      screenshots: [
+        'assets/projects/ensure/1.jpg',
+        'assets/projects/ensure/2.jpg',
+        'assets/projects/ensure/3.jpg',
+        'assets/projects/ensure/4.jpg',
+        'assets/projects/ensure/5.jpg',
+      ],
       // TODO: add the demo link.
     ),
     Project(

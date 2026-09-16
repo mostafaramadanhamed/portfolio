@@ -68,7 +68,7 @@ class ProjectCard extends StatelessWidget {
                   ),
                 ),
               ),
-              if (project.isPlaceholder) ...[
+              if (project.status case final status?) ...[
                 const SizedBox(width: 10),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -80,7 +80,7 @@ class ProjectCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Text(
-                    'Details soon',
+                    status,
                     style: AppTheme.mono(
                       fontSize: 11,
                       color: AppColors.accentSecondary,

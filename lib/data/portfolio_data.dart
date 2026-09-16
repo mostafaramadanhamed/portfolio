@@ -30,7 +30,7 @@ class Project {
     this.demoUrl,
     this.storeUrl,
     this.screenshots = const [],
-    this.isPlaceholder = false,
+    this.status,
   });
 
   final String name;
@@ -44,8 +44,8 @@ class Project {
   /// Asset paths of phone screenshots, shown in order.
   final List<String> screenshots;
 
-  /// Shows a "details coming soon" badge until real content is filled in.
-  final bool isPlaceholder;
+  /// Optional badge next to the name, e.g. for unreleased apps.
+  final String? status;
 }
 
 class SkillGroup {
@@ -124,6 +124,7 @@ abstract final class PortfolioData {
   static const workProjects = [
     Project(
       name: 'JobSite Inspector',
+      status: 'In development',
       summary:
           'Field app for fire-safety technicians to run building inspections '
           'and sync results with the back office.',
@@ -147,6 +148,7 @@ abstract final class PortfolioData {
     ),
     Project(
       name: 'Oplla — Client App',
+      status: 'In development',
       summary:
           'Marketplace app for renting media production equipment and '
           'booking crew such as camera operators, editors, and voice-over artists.',
@@ -171,6 +173,7 @@ abstract final class PortfolioData {
     ),
     Project(
       name: 'Oplla — Provider App',
+      status: 'In development',
       summary:
           'Companion app for providers to manage their services, equipment '
           'listings, bookings, and earnings.',

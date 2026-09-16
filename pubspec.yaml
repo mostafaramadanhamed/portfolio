@@ -66,6 +66,10 @@ flutter:
     - assets/google_fonts/
     - assets/projects/whatsapp/
     - assets/projects/ensure/
+    - assets/projects/halal/
+    - assets/projects/kidney_care/
+    - assets/projects/tiger_vpn/
+    - assets/projects/tasty_food/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

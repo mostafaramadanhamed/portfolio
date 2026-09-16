@@ -2,9 +2,20 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:protfolio/data/portfolio_data.dart';
 
 void main() {
-  test('personal projects all link to GitHub', () {
-    for (final project in PortfolioData.personalProjects) {
-      expect(project.githubUrl, isNotNull, reason: project.name);
+  test('every project has something to show or a link to follow', () {
+    for (final project in [
+      ...PortfolioData.workProjects,
+      ...PortfolioData.personalProjects,
+    ]) {
+      final hasLink = project.githubUrl != null ||
+          project.demoUrl != null ||
+          project.storeUrl != null;
+      final isWork = PortfolioData.workProjects.contains(project);
+      expect(
+        hasLink || project.screenshots.isNotEmpty || isWork,
+        isTrue,
+        reason: '${project.name} has no screenshots and no link',
+      );
     }
   });
 

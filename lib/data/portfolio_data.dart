@@ -87,7 +87,10 @@ abstract final class PortfolioData {
   static const focusAreas = [
     ('Clean Architecture', 'Layered, testable code that scales with the team.'),
     ('State Management', 'BLoC, Cubit, and Riverpod done predictably.'),
-    ('Real-time Apps', 'Chat, presence, and live updates with Firebase & Supabase.'),
+    (
+      'Real-time Apps',
+      'Chat, presence, and live updates with Firebase & Supabase.',
+    ),
     ('Performance', 'Caching, local storage, and fewer network round-trips.'),
   ];
 
@@ -189,22 +192,34 @@ abstract final class PortfolioData {
     ),
   ];
 
+  // Private repos have no githubUrl.
   static const personalProjects = [
     Project(
-      name: 'WhatsApp Clone',
-      summary: 'A real-time messaging app modeled on WhatsApp.',
+      name: 'Halal',
+      summary:
+          'A Muslim companion app for prayer times, Quran, azkar, and the '
+          'Hijri calendar, in Arabic and English.',
       highlights: [
-        'Phone number authentication and user profiles with contacts and avatars.',
-        'Real-time 1-on-1 chat with text, images, GIFs, audio, video, and emojis.',
-        'Online status, seen indicators, and auto-scroll for new messages.',
+        'Prayer times calculated on-device from GPS, with adhan alarms scheduled natively on Android (Kotlin).',
+        'Full Quran with adjustable font sizes and surah bookmarks.',
+        'Azkar categories with scheduled reminders, a digital tasbih that saves sessions, and a qibla compass.',
+        'Hijri calendar with Islamic events, light/dark themes, and Arabic/English localization.',
+        'Clean architecture with use cases, Cubits, and GetIt, plus unit tests.',
       ],
-      tech: ['Flutter', 'Firebase', 'Riverpod'],
-      githubUrl: 'https://github.com/mostafaramadanhamed/whatsapp',
+      tech: [
+        'Flutter',
+        'BLoC / Cubit',
+        'Clean Architecture',
+        'Kotlin',
+        'Local Notifications',
+        'Localization',
+      ],
       screenshots: [
-        'assets/projects/whatsapp/1.jpg',
-        'assets/projects/whatsapp/2.jpg',
-        'assets/projects/whatsapp/3.jpg',
-        'assets/projects/whatsapp/4.jpg',
+        'assets/projects/halal/1.jpg',
+        'assets/projects/halal/2.jpg',
+        'assets/projects/halal/3.jpg',
+        'assets/projects/halal/4.jpg',
+        'assets/projects/halal/5.jpg',
       ],
     ),
     Project(
@@ -227,6 +242,62 @@ abstract final class PortfolioData {
       // TODO: add the demo link.
     ),
     Project(
+      name: 'Kidney Care',
+      summary:
+          'A health app that helps kidney patients track lab results, '
+          'medicines, diet, and water intake. Built with a teammate.',
+      highlights: [
+        'Multi-step form for kidney lab indicators that leads to a guidance result screen.',
+        'Medicine guide with usage, side effects, and doses, plus health advice articles.',
+        'Kidney-friendly diet guide by food category and a daily water intake tracker.',
+        'Doctor directory with clinic locations, and email or Google sign-in with Firebase.',
+      ],
+      tech: ['Flutter', 'Firebase Auth', 'Firestore', 'WebView'],
+      screenshots: [
+        'assets/projects/kidney_care/1.jpg',
+        'assets/projects/kidney_care/2.jpg',
+        'assets/projects/kidney_care/3.jpg',
+        'assets/projects/kidney_care/4.jpg',
+        'assets/projects/kidney_care/5.jpg',
+        'assets/projects/kidney_care/6.jpg',
+        'assets/projects/kidney_care/7.jpg',
+      ],
+    ),
+    Project(
+      name: 'WhatsApp Clone',
+      summary: 'A real-time messaging app modeled on WhatsApp.',
+      highlights: [
+        'Phone number authentication and user profiles with contacts and avatars.',
+        'Real-time 1-on-1 chat with text, images, GIFs, audio, video, and emojis.',
+        'Online status, seen indicators, and auto-scroll for new messages.',
+      ],
+      tech: ['Flutter', 'Firebase', 'Riverpod'],
+      githubUrl: 'https://github.com/mostafaramadanhamed/whatsapp',
+      screenshots: [
+        'assets/projects/whatsapp/1.jpg',
+        'assets/projects/whatsapp/2.jpg',
+        'assets/projects/whatsapp/3.jpg',
+        'assets/projects/whatsapp/4.jpg',
+      ],
+    ),
+    Project(
+      name: 'Tiger VPN',
+      summary: 'A free VPN client for Android with one-tap connect.',
+      highlights: [
+        'Connects through a native OpenVPN module bridged to Flutter.',
+        'Fetches and parses the public VPN Gate server list (CSV) to pick countries.',
+        'Live connection status, timer, and upload/download speeds.',
+        'Settings, localization, and in-app rating and sharing.',
+      ],
+      tech: ['Flutter', 'Provider', 'OpenVPN', 'Hive', 'Localization'],
+      screenshots: [
+        'assets/projects/tiger_vpn/1.jpg',
+        'assets/projects/tiger_vpn/2.jpg',
+        'assets/projects/tiger_vpn/3.jpg',
+        'assets/projects/tiger_vpn/4.jpg',
+      ],
+    ),
+    Project(
       name: 'Task Ease',
       summary: 'A task manager with reminders, priorities, and daily progress.',
       highlights: [
@@ -236,6 +307,41 @@ abstract final class PortfolioData {
       ],
       tech: ['Flutter', 'Hive', 'Local Notifications', 'BLoC'],
       githubUrl: 'https://github.com/mostafaramadanhamed/Task-Ease-App',
+    ),
+    Project(
+      name: 'Tasty Food',
+      summary: 'A recipe app for browsing meals, drinks, and desserts.',
+      highlights: [
+        'Onboarding flow, name sign-in, and categorized recipe browsing.',
+        'Home carousel, ratings, and a favorites screen.',
+      ],
+      tech: ['Flutter', 'Carousel', 'Page Indicators'],
+      screenshots: [
+        'assets/projects/tasty_food/1.jpg',
+        'assets/projects/tasty_food/2.jpg',
+        'assets/projects/tasty_food/3.jpg',
+        'assets/projects/tasty_food/4.jpg',
+      ],
+    ),
+    Project(
+      name: 'Notes',
+      summary: 'A simple offline notes app.',
+      highlights: [
+        'Create, edit, and delete notes with a color for each one.',
+        'Stored locally with Hive and managed with Cubits.',
+      ],
+      tech: ['Flutter', 'Hive', 'BLoC / Cubit'],
+      githubUrl: 'https://github.com/mostafaramadanhamed/noteApp',
+    ),
+    Project(
+      name: 'Azkar',
+      summary: 'Morning and evening azkar with a tasbih counter.',
+      highlights: [
+        'Built-in azkar lists plus your own custom azkar.',
+        'Tasbih counter, with data saved offline in Hive.',
+      ],
+      tech: ['Flutter', 'Hive', 'BLoC / Cubit'],
+      githubUrl: 'https://github.com/mostafaramadanhamed/azkar',
     ),
   ];
 

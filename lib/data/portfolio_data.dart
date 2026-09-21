@@ -29,6 +29,7 @@ class Project {
     this.githubUrl,
     this.demoUrl,
     this.storeUrl,
+    this.caseStudyUrl,
     this.screenshots = const [],
     this.status,
   });
@@ -40,6 +41,9 @@ class Project {
   final String? githubUrl;
   final String? demoUrl;
   final String? storeUrl;
+
+  /// Public write-up of the project, e.g. the client's work page.
+  final String? caseStudyUrl;
 
   /// Asset paths of phone screenshots, shown in order.
   final List<String> screenshots;
@@ -58,7 +62,7 @@ class SkillGroup {
 abstract final class PortfolioData {
   static const name = 'Mostafa Ramadan';
   static const role = 'Flutter Developer';
-  static const location = 'Egypt · Remote';
+  static const location = 'Egypt · Open to relocation';
   static const email = 'mostafaramadanhamed010@gmail.com';
 
   /// wa.me expects the number in international format without "+" or spaces.
@@ -67,8 +71,8 @@ abstract final class PortfolioData {
       'https://www.linkedin.com/in/mostafa-ramadan-hamed-b26177213/';
   static const githubUrl = 'https://github.com/mostafaramadanhamed';
 
-  /// Served from web/Mostafa Ramadan CV.pdf.
-  static const cvPath = 'Mostafa%20Ramadan%20CV.pdf';
+  /// Served from web/Mostafa Ramadan - Flutter Developer CV.pdf.
+  static const cvPath = 'Mostafa%20Ramadan%20-%20Flutter%20Developer%20CV.pdf';
 
   static const tagline =
       'I build fast, maintainable cross-platform apps with clean architecture, '
@@ -125,6 +129,7 @@ abstract final class PortfolioData {
     Project(
       name: 'JobSite Inspector',
       status: 'In development',
+      caseStudyUrl: 'https://dinotik.com/en/work/fire-inspection',
       summary:
           'Field app for fire-safety technicians to run building inspections '
           'and sync results with the back office.',
@@ -149,6 +154,7 @@ abstract final class PortfolioData {
     Project(
       name: 'Oplla — Client App',
       status: 'In development',
+      caseStudyUrl: 'https://dinotik.com/en/work/oplla',
       summary:
           'Marketplace app for renting media production equipment and '
           'booking crew such as camera operators, editors, and voice-over artists.',
@@ -174,6 +180,7 @@ abstract final class PortfolioData {
     Project(
       name: 'Oplla — Provider App',
       status: 'In development',
+      caseStudyUrl: 'https://dinotik.com/en/work/oplla',
       summary:
           'Companion app for providers to manage their services, equipment '
           'listings, bookings, and earnings.',
@@ -314,8 +321,8 @@ abstract final class PortfolioData {
   ];
 
   static const skills = [
-    SkillGroup('Languages', ['Dart', 'C++']),
-    SkillGroup('State Management', ['BLoC', 'Cubit', 'Riverpod']),
+    SkillGroup('Languages', ['Dart', 'Kotlin', 'C++']),
+    SkillGroup('State Management', ['BLoC', 'Cubit', 'Riverpod', 'Provider']),
     SkillGroup('Flutter', [
       'Google Maps',
       'Payments',
@@ -330,6 +337,8 @@ abstract final class PortfolioData {
       'Dio',
       'Http',
       'JSON',
+      'WebSockets',
+      'JWT',
       'Hive',
       'SQflite',
       'Shared Preferences',
@@ -349,6 +358,8 @@ abstract final class PortfolioData {
       'Git & GitHub',
       'GitHub Actions',
       'Fastlane',
+      'Unit Testing',
+      'Postman',
     ]),
     SkillGroup('AI Tools', [
       'Claude Code',

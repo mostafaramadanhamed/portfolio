@@ -40,6 +40,13 @@ class ProjectCard extends StatelessWidget {
                   url: url,
                   tooltip: 'Store listing',
                 ),
+              if (project.caseStudyUrl case final url?)
+                LinkIconButton(
+                  icon: FontAwesomeIcons.newspaper,
+                  url: url,
+                  tooltip: 'Case study',
+                  size: 18,
+                ),
               if (project.demoUrl case final url?)
                 LinkIconButton(
                   icon: FontAwesomeIcons.arrowUpRightFromSquare,

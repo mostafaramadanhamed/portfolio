@@ -69,6 +69,7 @@ flutter:
     - assets/projects/halal/
     - assets/projects/kidney_care/
     - assets/projects/tiger_vpn/
+    - assets/projects/thaheen/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

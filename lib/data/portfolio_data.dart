@@ -61,7 +61,7 @@ class SkillGroup {
 
 abstract final class PortfolioData {
   static const name = 'Mostafa Ramadan';
-  static const role = 'Flutter Developer';
+  static const role = 'Mid-Level Flutter Developer';
   static const location = 'Egypt · Open to relocation';
   static const email = 'mostafaramadanhamed010@gmail.com';
 
@@ -80,7 +80,7 @@ abstract final class PortfolioData {
 
   static const about = [
     "I'm a Flutter developer with a Computer Science degree, currently "
-        'building production apps at Dinotik. I care about code that is easy '
+        'building production apps at Thaheen. I care about code that is easy '
         'to read, test, and scale — clean architecture, SOLID principles, and '
         'predictable state management with BLoC and Riverpod.',
     'I have shipped real-time chat, social, and productivity apps backed by '
@@ -100,9 +100,21 @@ abstract final class PortfolioData {
 
   static const experience = [
     Experience(
+      company: 'Thaheen',
+      role: 'Mid-Level Flutter Developer',
+      period: 'Oct 2026 — Present',
+      project: 'Thaheen student app',
+      highlights: [
+        'Building the Thaheen student app for Android and iOS, rebuilt from scratch in Flutter with the same feature set as the old app.',
+        'Enforced a strict layered architecture (core, data, design system, features) with a fake for every repository, so the app runs and is tested with no backend.',
+        'Shipped protected course video, quizzes, flashcards, and a Focus timer with home-screen widgets and offline sync.',
+        'Set up CI/CD with GitHub Actions for Google Play and TestFlight releases, golden tests, and Firebase Crashlytics and Analytics.',
+      ],
+    ),
+    Experience(
       company: 'Dinotik',
       role: 'Flutter Developer',
-      period: 'Jun 2025 — Present',
+      period: 'Jun 2025 — Oct 2026',
       project: 'JobSite Inspector and Oplla',
       highlights: [
         'Applied clean code principles to improve maintainability and scalability.',
@@ -126,6 +138,41 @@ abstract final class PortfolioData {
   ];
 
   static const workProjects = [
+    Project(
+      name: 'Thaheen — Student App',
+      storeUrl: 'https://play.google.com/store/apps/details?id=com.thaheen.app',
+      summary:
+          'Learning app for university students: courses with video lessons, '
+          'quizzes, flashcards, and study tools, in Arabic and English.',
+      highlights: [
+        'Courses with DRM-protected video (VdoCipher, Widevine/FairPlay), lesson recordings, and in-app PDF and image viewers.',
+        'Quizzes with answer review, lesson Q&A, flashcards, notes, saved lessons, certificates, and a GPA calculator.',
+        'Let\'s Focus: a study timer with ambient sound, home-screen widgets on Android and iOS, share cards, and offline sync on a Drift database.',
+        'Checkout and orders, App Store in-app purchases with StoreKit 2, referrals, and an ambassador program.',
+        'Layered architecture enforced by a CI rule, a generated OpenAPI client, and a fake for every repository; 600+ test files including goldens.',
+        'FCM push, local notifications, deep links, Crashlytics, Analytics, full RTL support, and CI releases to Google Play and TestFlight.',
+      ],
+      tech: [
+        'Flutter',
+        'BLoC / Cubit',
+        'GoRouter',
+        'GetIt',
+        'Dio',
+        'OpenAPI',
+        'Drift',
+        'Firebase',
+        'GitHub Actions',
+      ],
+      screenshots: [
+        'assets/projects/thaheen/1.jpg',
+        'assets/projects/thaheen/2.jpg',
+        'assets/projects/thaheen/3.jpg',
+        'assets/projects/thaheen/4.jpg',
+        'assets/projects/thaheen/5.jpg',
+        'assets/projects/thaheen/6.jpg',
+        'assets/projects/thaheen/7.jpg',
+      ],
+    ),
     Project(
       name: 'JobSite Inspector',
       status: 'In development',

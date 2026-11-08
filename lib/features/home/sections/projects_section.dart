@@ -20,7 +20,7 @@ class ProjectsSection extends StatelessWidget {
           const RevealOnScroll(
             child: SectionTitle(index: 3, title: 'Projects'),
           ),
-          const _GroupLabel('Professional work · Dinotik'),
+          const _GroupLabel('Professional work · Thaheen & Dinotik'),
           _ProjectGrid(projects: PortfolioData.workProjects, maxColumns: 3),
           const SizedBox(height: 56),
           const _GroupLabel('Personal projects'),
